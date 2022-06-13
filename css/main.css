@@ -103,7 +103,7 @@ body {
 
 .main-info {
   font-family: 'Trocchi', serif;
-  padding: 1.5%;
+  padding: 2%;
   text-align: center;
   color: #802A50;
 }
@@ -113,6 +113,7 @@ body {
 }
 
 .main-info h2 {
+  font-size: 2.5rem;
   padding-top: 1.5%;
   text-align: center;
   font-family: 'Grape Nuts', cursive;
@@ -187,5 +188,45 @@ body {
           animation: pulse 1s;
   -webkit-transition: ease-in;
   transition: ease-in;
+}
+
+.invisible {
+  padding: 30px;
+}
+
+.invisible input[type='text'],
+.invisible select,
+.invisible textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #F7B9B9;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  min-height: 40px;
+  max-height: 200px;
+}
+
+.invisible input[type='submit'] {
+  background-color: #C4DAFC;
+  color: #fff;
+  padding: 2%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.invisible .container {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.invisible label {
+  font-family: 'Trocchi', serif;
+  color: #802A50;
 }
 /*# sourceMappingURL=main.css.map */

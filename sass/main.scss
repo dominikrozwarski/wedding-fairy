@@ -3,7 +3,6 @@
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Trocchi', serif;
 
-
 @import './animations';
 @import './colors';
 
@@ -42,13 +41,14 @@ body {
 
 .main-info {
 	font-family: 'Trocchi', serif;
-	padding: 1.5%;
+	padding: 2%;
 	text-align: center;
 	color: $violet;
 	h1 {
 		font-size: 1.5em;
 	}
 	h2 {
+		font-size: 2.5rem;
 		padding-top: 1.5%;
 		text-align: center;
 		font-family: 'Grape Nuts', cursive;
@@ -69,16 +69,15 @@ body {
 			padding: 10px;
 			transition: transform 0.3s;
 			color: $violet;
-			
 		}
 
-		i:hover{
+		i:hover {
 			animation: rotate 1s;
 		}
 	}
 }
 
-.contactArror{
+.contactArror {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -86,9 +85,8 @@ body {
 	padding: 5%;
 	font-size: 1.2em;
 	color: $violet;
-	
-	
-    i{
+
+	i {
 		position: relative;
 		top: 30px;
 		padding: 9%;
@@ -98,18 +96,50 @@ body {
 		background-color: $violet;
 		border-radius: 50%;
 		cursor: pointer;
-		
 
-		&:hover{
+		&:hover {
 			animation: pulse 1s;
 			transition: ease-in;
-		
 		}
 	}
 }
 
+.invisible {
+	padding: 30px;
+	input[type='text'],
+	select,
+	textarea {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid $pink-three;
+		border-radius: 4px;
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: 16px;
+		resize: vertical;
+		min-height: 40px;
+		max-height: 200px;
+	}
 
+	input[type='submit'] {
+		background-color: $light-blue;
+		color: $white;
+		padding: 2%;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
 
-// @import './small';
-// @import './medium';
-// @import './large';
+	.container {
+		border-radius: 5px;
+		background-color: $white;
+		padding: 20px;
+	}
+
+	label {
+		font-family: 'Trocchi', serif;
+		color: $violet;
+	}
+
+	
+}

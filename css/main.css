@@ -1,0 +1,191 @@
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  font-size: 1.3rem;
+  font-family: 'Headland One', serif;
+}
+
+.top {
+  position: relative;
+}
+
+.top .logo {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+}
+
+.main-info {
+  font-family: 'Trocchi', serif;
+  padding: 1.5%;
+  text-align: center;
+  color: #802A50;
+}
+
+.main-info h1 {
+  font-size: 1.5em;
+}
+
+.main-info h2 {
+  padding-top: 1.5%;
+  text-align: center;
+  font-family: 'Grape Nuts', cursive;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.icons a {
+  font-size: 36px;
+}
+
+.icons a i {
+  cursor: pointer;
+  padding: 10px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  color: #802A50;
+}
+
+.icons a i:hover {
+  -webkit-animation: rotate 1s;
+          animation: rotate 1s;
+}
+
+.contactArror {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5%;
+  font-size: 1.2em;
+  color: #802A50;
+}
+
+.contactArror i {
+  position: relative;
+  top: 30px;
+  padding: 9%;
+  font-size: 1.3em;
+  color: #fff;
+  border: 1px solid #802A50;
+  background-color: #802A50;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contactArror i:hover {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  -webkit-transition: ease-in;
+  transition: ease-in;
+}
+/*# sourceMappingURL=main.css.map */

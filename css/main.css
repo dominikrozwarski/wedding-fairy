@@ -56,9 +56,37 @@
   }
 }
 
-*,
-*::before,
-*::after {
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -88,7 +116,7 @@ body {
           flex-direction: column;
   background-color: #fff;
   font-size: 1.3rem;
-  font-family: 'Headland One', serif;
+  font-family: 'Trocchi', serif;
 }
 
 .top {
@@ -102,8 +130,7 @@ body {
 }
 
 .main-info {
-  font-family: 'Trocchi', serif;
-  padding: 2%;
+  padding: 20px;
   text-align: center;
   color: #802A50;
 }
@@ -114,7 +141,7 @@ body {
 
 .main-info h2 {
   font-size: 2.5rem;
-  padding-top: 1.5%;
+  padding-top: 15px;
   text-align: center;
   font-family: 'Grape Nuts', cursive;
 }
@@ -123,27 +150,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1%;
+  padding: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50%;
+  width: 30%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 
 .icons a {
-  font-size: 36px;
+  font-size: 4rem;
 }
 
 .icons a i {
   cursor: pointer;
   padding: 10px;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
   color: #802A50;
 }
 
@@ -166,18 +189,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5%;
+  padding: 20px;
   font-size: 1.2em;
   color: #802A50;
 }
 
 .contactArror i {
   position: relative;
-  top: 30px;
-  padding: 9%;
+  top: 15px;
+  padding: 20px;
   font-size: 1.3em;
   color: #fff;
-  border: 1px solid #802A50;
   background-color: #802A50;
   border-radius: 50%;
   cursor: pointer;
@@ -186,23 +208,19 @@ body {
 .contactArror i:hover {
   -webkit-animation: pulse 1s;
           animation: pulse 1s;
-  -webkit-transition: ease-in;
-  transition: ease-in;
 }
 
-.invisible {
+.contact-form {
   padding: 30px;
 }
 
-.invisible input[type='text'],
-.invisible select,
-.invisible textarea {
+.contact-form input[type='text'],
+.contact-form select,
+.contact-form textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #F7B9B9;
   border-radius: 4px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
@@ -210,7 +228,7 @@ body {
   max-height: 200px;
 }
 
-.invisible input[type='submit'] {
+.contact-form input[type='submit'] {
   background-color: #C4DAFC;
   color: #fff;
   padding: 2%;
@@ -219,14 +237,28 @@ body {
   cursor: pointer;
 }
 
-.invisible .container {
+.contact-form input[type='submit']:hover {
+  -webkit-animation: grow 1s;
+          animation: grow 1s;
+}
+
+.contact-form input[type='text']:focus,
+.contact-form textarea:focus {
+  border: 1px solid #802A50;
+  outline: #802A50;
+}
+
+.contact-form .container {
   border-radius: 5px;
   background-color: #fff;
   padding: 20px;
 }
 
-.invisible label {
-  font-family: 'Trocchi', serif;
+.contact-form label {
   color: #802A50;
+}
+
+.contact-form #subject {
+  font-family: 'Trocchi', serif;
 }
 /*# sourceMappingURL=main.css.map */

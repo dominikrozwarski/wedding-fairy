@@ -45,10 +45,11 @@ body {
 		font-size: 1.5em;
 	}
 	h2 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		padding-top: 15px;
 		text-align: center;
-		font-family: 'Grape Nuts', cursive;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
 	}
 }
 
@@ -115,14 +116,15 @@ body {
 	}
 
 	input[type='submit'] {
-		background-color: $light-blue;
+		background-color: $violet;
 		color: $white;
 		padding: 2%;
 		border: none;
 		border-radius: 4px;
 		cursor: pointer;
-		&:hover{
-			animation: grow 1s;
+
+		&:hover {
+			animation: pulse 1s;
 		}
 	}
 
@@ -147,5 +149,8 @@ body {
 	}
 }
 
-
-
+label[for='fname']:after,
+[for='email']:after, [for='subject']:after {
+	content: '*';
+	color: red;
+}

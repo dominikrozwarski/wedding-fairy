@@ -1,8 +1,6 @@
-
 const form = document.querySelector('.contact-form');
 const shadow = document.querySelector('.shadow');
 //form and boxShadow
-
 
 const show = document.querySelector('.mail');
 //displaying form
@@ -16,7 +14,6 @@ const email = document.querySelector('#e-mail');
 const phone = document.querySelector('#phone');
 const subject = document.querySelector('#subject');
 //inputs in form
-
 
 const showMsg = () => {
 	form.style.zIndex = '100';
@@ -46,9 +43,11 @@ const clearAll = () => {
 };
 
 const sendBtn = () => {
-	if (nameF.value == '' || email.value == '' || subject.value == '') {		nameF.style.border = '2px solid red';
+	if (nameF.value == '' || email.value == '' || subject.value == '') {
 		email.style.border = '2px solid red';
 		subject.style.border = '2px solid red';
+		nameF.style.border = '2px solid red';
+		alert('Uzupełnij wszystkie pola zaznaczone " * " ');
 
 		//changing border of inputs to red to alert there something wrong
 	} else {
@@ -56,7 +55,6 @@ const sendBtn = () => {
 		closeMsg();
 		alert('Dziękuję, wiadomość została wysłana');
 		//all good , closing form and cleraing all inputs
-		
 	}
 };
 

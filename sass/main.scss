@@ -10,6 +10,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+
 }
 
 html {
@@ -25,7 +26,7 @@ body {
 	justify-content: start;
 	align-items: center;
 	flex-direction: column;
-	background-color:$white;
+	background-color: $white;
 	font-size: 1.3rem;
 	font-family: 'Trocchi', serif;
 }
@@ -161,9 +162,8 @@ label[for='fname']:after,
 	background-color: $pink;
 	padding: 10px;
 	position: absolute;
-	top: 5%;
+	top: 2%;
 	z-index: -100;
-	
 }
 
 .shadow {
@@ -174,7 +174,7 @@ label[for='fname']:after,
 	// background-color: rgba(167, 162, 162, 0.218);
 }
 
-.btn{
+.btn {
 	display: flex;
 	justify-content: space-evenly;
 }

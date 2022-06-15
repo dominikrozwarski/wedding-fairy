@@ -245,7 +245,7 @@ label[for='fname']:after,
   background-color: #F2C1D1;
   padding: 10px;
   position: absolute;
-  top: 5%;
+  top: 2%;
   z-index: -100;
 }
 

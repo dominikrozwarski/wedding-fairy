@@ -105,19 +105,20 @@ body {
 	padding: 30px;
 	input[type='text'],
 	select,
-	textarea {
+	textarea,input[type='email'] ,input[type='phone'] {
 		width: 100%;
 		padding: 12px;
-		border: 1px solid $pink-three;
+		border: 2px solid $pink-three;
 		border-radius: 4px;
 		margin-top: 6px;
 		margin-bottom: 16px;
 		resize: vertical;
 		min-height: 40px;
 		max-height: 200px;
+	
 	}
 
-	input[type='submit'] {
+	input[type='button'] {
 		background-color: $violet;
 		color: $white;
 		padding: 20px;
@@ -131,7 +132,7 @@ body {
 	}
 
 	input[type='text']:focus,
-	textarea:focus {
+	textarea:focus, input[type='email']:focus ,input[type='phone']:focus{
 		border: 1px solid $violet;
 		outline: $violet;
 	}
@@ -164,6 +165,7 @@ label[for='fname']:after,
 	position: absolute;
 	top: 2%;
 	z-index: -100;
+	max-width: 500px; 
 }
 
 .shadow {

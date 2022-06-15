@@ -188,10 +188,10 @@ body {
 
 .contact-form input[type='text'],
 .contact-form select,
-.contact-form textarea {
+.contact-form textarea, .contact-form input[type='email'], .contact-form input[type='phone'] {
   width: 100%;
   padding: 12px;
-  border: 1px solid #F7B9B9;
+  border: 2px solid #f7b9b9;
   border-radius: 4px;
   margin-top: 6px;
   margin-bottom: 16px;
@@ -200,7 +200,7 @@ body {
   max-height: 200px;
 }
 
-.contact-form input[type='submit'] {
+.contact-form input[type='button'] {
   background-color: #802A50;
   color: #fff;
   padding: 20px;
@@ -209,13 +209,13 @@ body {
   cursor: pointer;
 }
 
-.contact-form input[type='submit']:hover {
+.contact-form input[type='button']:hover {
   -webkit-animation: pulse 1s;
           animation: pulse 1s;
 }
 
 .contact-form input[type='text']:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus, .contact-form input[type='email']:focus, .contact-form input[type='phone']:focus {
   border: 1px solid #802A50;
   outline: #802A50;
 }
@@ -247,6 +247,7 @@ label[for='fname']:after,
   position: absolute;
   top: 2%;
   z-index: -100;
+  max-width: 500px;
 }
 
 .shadow {

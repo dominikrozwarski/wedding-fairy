@@ -43,14 +43,14 @@
 
     <div class="contactArror">
         <h3>Skontaktuj się ze mną :</h3>
-        <i class="fa-solid fa-envelope" alt="envelope, e-mail"></i>
+        <i class="fa-solid fa-envelope mail" alt="envelope, e-mail"></i>
     </div>
 
 
     <div class="contact-form">
-        <form>
+        <form class="form">
             <label for="fname">Imię i nazwisko: </label>
-            <input type="text" id="fname"  name="firstname" placeholder="Twoje imię i nazwisko..">
+            <input type="text" id="fname" name="firstname" placeholder="Twoje imię i nazwisko..">
 
             <label for="email">E-mail: </label>
             <input type="text" id="e-mail" name="e-mail" placeholder="E-mail...">
@@ -60,14 +60,18 @@
 
             <label for="subject">Temat: </label>
             <textarea id="subject" name="subject" placeholder="W czym mogę Ci pomóc..." style="height:200px"></textarea>
-
-            <input type="submit" value="Wyślij">
+            <div class="btn">
+                <input class="send" type="submit" value="Wyślij">
+                <input class="close" type="submit" value="Zamknij">
+            </div>
         </form>
     </div>
 
+    <div class="shadow"></div>
 
 
 
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -66,6 +66,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  background-color: #fff;
 }
 
 body {
@@ -202,7 +203,7 @@ body {
 .contact-form input[type='submit'] {
   background-color: #802A50;
   color: #fff;
-  padding: 2%;
+  padding: 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -234,8 +235,33 @@ body {
 }
 
 label[for='fname']:after,
-[for='email']:after, [for='subject']:after {
+[for='email']:after,
+[for='subject']:after {
   content: '*';
   color: red;
+}
+
+.contact-form {
+  background-color: #F2C1D1;
+  padding: 10px;
+  position: absolute;
+  top: 5%;
+  z-index: -100;
+}
+
+.shadow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 /*# sourceMappingURL=main.css.map */

@@ -15,6 +15,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	background-color: $white;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
 	justify-content: start;
 	align-items: center;
 	flex-direction: column;
-	background-color: $white;
+	background-color:$white;
 	font-size: 1.3rem;
 	font-family: 'Trocchi', serif;
 }
@@ -118,7 +119,7 @@ body {
 	input[type='submit'] {
 		background-color: $violet;
 		color: $white;
-		padding: 2%;
+		padding: 20px;
 		border: none;
 		border-radius: 4px;
 		cursor: pointer;
@@ -150,7 +151,30 @@ body {
 }
 
 label[for='fname']:after,
-[for='email']:after, [for='subject']:after {
+[for='email']:after,
+[for='subject']:after {
 	content: '*';
 	color: red;
+}
+
+.contact-form {
+	background-color: $pink;
+	padding: 10px;
+	position: absolute;
+	top: 5%;
+	z-index: -100;
+	
+}
+
+.shadow {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: -100;
+	// background-color: rgba(167, 162, 162, 0.218);
+}
+
+.btn{
+	display: flex;
+	justify-content: space-evenly;
 }

@@ -15,6 +15,10 @@ const phone = document.querySelector('#phone');
 const subject = document.querySelector('#subject');
 //inputs in form
 
+const msg = document.querySelector('.msg');
+const msgButton = document.querySelector('.closeMsg');
+
+
 const showMsg = () => {
 	form.style.zIndex = '100';
 	shadow.style.zIndex = '10';
@@ -42,22 +46,55 @@ const clearAll = () => {
 	//clearing all inputs after cancel or sending
 };
 
+
+const clearInput = () =>{
+	if(nameF.value == ''){
+		nameF.style.border = '2px solid red';
+	}
+	else{
+		nameF.style.border = '2px solid pink';
+	}
+}
+
+
+const clearEmail = () =>{
+	if(email.value == ''){
+		email.style.border = '2px solid red';
+	}
+	else{
+		email.style.border = '2px solid pink';
+	}
+}
+
+const clearSubject = () =>{
+	if(subject.value == ''){
+		subject.style.border = '2px solid red';
+	}
+	else{
+		subject.style.border = '2px solid pink';
+	}
+}
+
+
 const sendBtn = () => {
 	if (nameF.value == '' || email.value == '' || subject.value == '') {
-		email.style.border = '2px solid red';
-		subject.style.border = '2px solid red';
-		nameF.style.border = '2px solid red';
-		alert('Uzupełnij wszystkie pola zaznaczone " * " ');
-
+		clearInput();
+		clearEmail();
+		clearSubject();
 		//changing border of inputs to red to alert there something wrong
 	} else {
 		clearAll();
 		closeMsg();
-		alert('Dziękuję, wiadomość została wysłana');
+		msg.style.zIndex = '100';
 		//all good , closing form and cleraing all inputs
 	}
 };
 
+const closeM = () =>{
+	msg.style.zIndex = '-100';
+}
+
 send.addEventListener('click', sendBtn);
 show.addEventListener('click', showMsg);
 closeBtn.addEventListener('click', closeMsg);
+msgButton.addEventListener('click', closeM)

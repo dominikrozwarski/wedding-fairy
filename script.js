@@ -18,7 +18,6 @@ const subject = document.querySelector('#subject');
 const msg = document.querySelector('.msg');
 const msgButton = document.querySelector('.closeMsg');
 
-
 const showMsg = () => {
 	form.style.zIndex = '100';
 	shadow.style.zIndex = '10';
@@ -46,35 +45,29 @@ const clearAll = () => {
 	//clearing all inputs after cancel or sending
 };
 
-
-const clearInput = () =>{
-	if(nameF.value == ''){
+const clearInput = () => {
+	if (nameF.value == '') {
 		nameF.style.border = '2px solid red';
-	}
-	else{
+	} else {
 		nameF.style.border = '2px solid pink';
 	}
-}
+};
 
-
-const clearEmail = () =>{
-	if(email.value == ''){
+const clearEmail = () => {
+	if (email.value == '') {
 		email.style.border = '2px solid red';
-	}
-	else{
+	} else {
 		email.style.border = '2px solid pink';
 	}
-}
+};
 
-const clearSubject = () =>{
-	if(subject.value == ''){
+const clearSubject = () => {
+	if (subject.value == '') {
 		subject.style.border = '2px solid red';
-	}
-	else{
+	} else {
 		subject.style.border = '2px solid pink';
 	}
-}
-
+};
 
 const sendBtn = () => {
 	if (nameF.value == '' || email.value == '' || subject.value == '') {
@@ -85,16 +78,16 @@ const sendBtn = () => {
 	} else {
 		clearAll();
 		closeMsg();
-		msg.style.zIndex = '100';
+		msg.style.left = '50%';
 		//all good , closing form and cleraing all inputs
 	}
 };
 
-const closeM = () =>{
-	msg.style.zIndex = '-100';
-}
+const closeM = () => {
+	msg.style.left = '-10000px';
+};
 
 send.addEventListener('click', sendBtn);
 show.addEventListener('click', showMsg);
 closeBtn.addEventListener('click', closeMsg);
-msgButton.addEventListener('click', closeM)
+msgButton.addEventListener('click', closeM);

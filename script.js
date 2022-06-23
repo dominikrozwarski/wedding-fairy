@@ -21,6 +21,7 @@ const msgButton = document.querySelector('.closeMsg');
 const showMsg = () => {
 	form.style.zIndex = '100';
 	shadow.style.zIndex = '10';
+	closeM();
 	//displaying form and boxShadow
 };
 
